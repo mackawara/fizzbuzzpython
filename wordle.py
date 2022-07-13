@@ -1,7 +1,7 @@
 import re
 print("Pleae enter your age:")
-age=int(input("age in years : "))
-fav_car=input("what is your fav car: ")
+# age=int(input("age in years : "))
+# fav_car=input("what is your fav car: ")
 cars=["mazda","landrover","Jeep", "Ford", "Toyota"]
 people={"mac":{"name":"Macdonald Kawara","age":35}}
 """ 
@@ -20,6 +20,6 @@ print(people)
 
 data_range=range(len(cars))
 for data in data_range:
-    print(data)
+    print(cars[data])
 
 
