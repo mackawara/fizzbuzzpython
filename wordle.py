@@ -14,3 +14,9 @@ if age>people["mac"]["age"]:
         else:
             print(matches)
 
+print(people)
+people.update({"mac2":{"name":"Mac2"}})
+print(people)
+
+
+
