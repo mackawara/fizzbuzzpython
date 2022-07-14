@@ -16,8 +16,10 @@ while True:
         Write number corresponding to your choice """))
         print(type(userInput))
         if userInput in (1, 2, 3):
-        # print("please enter a valid number between 1and 3")
+            # print("please enter a valid number between 1and 3")
             break
+        else:
+            print("Invalid selection")
 
     u_sel = game_var[int(userInput)-1]
     c_sel = game_var[random.randrange(0, 3)]
@@ -28,7 +30,20 @@ while True:
         print("You lose: computer selected " +
               c_sel + " and you selected" + u_sel)
     elif u_sel == c_sel:
-        print("Tie :computer selected " + c_sel + " and you selected " + u_sel)
+        print("Tie :computer selected " + c_sel +
+              " and you selected " + u_sel + "please try again")
+        break
     else:
         print("congratulations you won")
-    break
+        while True:
+            playAgain=str(input("do you want to play again? Yes or no"))
+            if playAgain not in ("Yes","No"):
+                break
+            elif playAgain=="Yes":
+                continue
+            elif playAgain=="No":
+                break
+
+
+
+        
