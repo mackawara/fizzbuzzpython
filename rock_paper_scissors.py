@@ -1,4 +1,6 @@
 import random
+import sys
+print(sys.version_info)
 rock = "rock"
 paper = "paper"
 scissors = "scissors"
@@ -8,16 +10,19 @@ while True:
     print("in loop")
 
     while True:
+
         userInput = (input("""make your choice here
         1. Rock
         2. Paper
         3. Scissors
 
         Write number corresponding to your choice """))
-        print(type(userInput))
-        if userInput in (1, 2, 3):
-            # print("please enter a valid number between 1and 3")
+        print(userInput)
+        if userInput in ("1", "2", "3"):
             break
+            # userInput=int(userInput)
+            # print("please enter a valid number between 1and 3")
+            # break
         else:
             print("Invalid selection")
 
@@ -32,18 +37,12 @@ while True:
     elif u_sel == c_sel:
         print("Tie :computer selected " + c_sel +
               " and you selected " + u_sel + "please try again")
-        break
+
     else:
         print("congratulations you won")
         while True:
-            playAgain=str(input("do you want to play again? Yes or no"))
-            if playAgain not in ("Yes","No"):
+            playAgain = input("do you want to play again? Yes or no")
+            if playAgain not in ("Yes", "No"):
+                pass
+            elif playAgain == "No":
                 break
-            elif playAgain=="Yes":
-                continue
-            elif playAgain=="No":
-                break
-
-
-
-        
