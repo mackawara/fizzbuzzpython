@@ -25,29 +25,29 @@ def guess_the_word(hint, score_param):
         guess = input("Guess the word that corresponds with the hint: ")
 
         if guess in hint:
-            score = points_per_question[count]
+            score = int(points_per_question[count])
             # total_score = total_score+int(points_per_question[count])
-            print("Good guess, you win, You have scored: "+str(score) + " points")
-            print("points count is " + str(score) +
-                  " and your total score is now " + str(total_score))
-            return score+score_param
+            print("""Good guess, you win, You have scored: "+str(score) + " points
+                   and your total score is now " + str(total_score)""")
+            return score+int(score_param)
 
         else:
             count = count+1
             print("sorry please try again")
             print(count)
-            total_score = total_score+int(points_per_question[count])
+            # otal_score = total_score+int(points_per_question[count])
             if count >= 5:
                 print("game up : try again next time")
                 print("points count for this question is " +
-                      str(score) + " and total score is " + total_score)
+                      str(score) + " and total score is " + str(score+score_param))
                 break
 
 
 def questionsAdd(questions, total_score):
-    total_score 
+    total_score = 0
+    print("the score before the question is done " + str(total_score))
     for question in questions:
-        total_score=guess_the_word(question,total_score)
+        total_score = guess_the_word(question, total_score)
     print("Game over , you scored " + str(total_score))
 
 
