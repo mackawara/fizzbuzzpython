@@ -6,6 +6,16 @@ paper = "paper"
 scissors = "scissors"
 
 game_var = [rock, paper, scissors]
+
+
+# def game_result(self,gameSel,userSel):
+#     self.gameSel=gameSel
+#     self.userSel=userSel
+
+#     if self.gameSel==scissors:
+#         if self.userSel==paper:
+#             print
+
 while True:
     print("in loop")
 
