@@ -26,10 +26,11 @@ def guess_the_word(hint, score_param):
 
         if guess in hint:
             score = int(points_per_question[count])
-            # total_score = total_score+int(points_per_question[count])
-            print("""Good guess, you win, You have scored: "+str(score) + " points
-                   and your total score is now " + str(total_score)""")
-            return score+int(score_param)
+            acc_score = score+int(score_param)
+            print(f"Good guess, you win, You have scored: {score} "
+
+                  f"and your total score is now  {acc_score}")
+            return acc_score
 
         else:
             count = count+1
@@ -48,7 +49,8 @@ def questionsAdd(questions, total_score):
     print("the score before the question is done " + str(total_score))
     for question in questions:
         total_score = guess_the_word(question, total_score)
-    print("Game over , you scored " + str(total_score))
+    print(
+        f"Game over , you scored  {str(total_score)} out of {len(questions)*5}")
 
 
 questionsAdd(hints, total_score)
