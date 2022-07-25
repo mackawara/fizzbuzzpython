@@ -14,13 +14,13 @@ cricketList = ["fine leg", "wicket", "ball", "player",
                "club", "field", "match", "bowler", "batsman"]
 rugbyList = ["tag", "sevens", "all blacks", "try",
              "tackle", "penalty", "red card", "injury"]
-
-print(cricketList[-2:])
+#
+#print(cricketList[-2:])
 football = Wordgroup(footbalList, "football")
 cricket = Wordgroup(cricketList, "cricket")
 rugby = Wordgroup(rugbyList, "rugby")
 
-print(rugby.questions)
+#print(rugby.questions)
 
 hints = (football, cricket, rugby)
 print("""How to play this game
